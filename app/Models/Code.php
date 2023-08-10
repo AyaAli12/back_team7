@@ -10,7 +10,10 @@ class Code extends Model
 {
     use HasFactory;
 
-
+protected $fillable=[
+    'uid',
+    'code'
+];
 
     public function user() :BelongsTo
     {

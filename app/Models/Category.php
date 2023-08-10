@@ -11,7 +11,8 @@ class Category extends Model
     use HasFactory;
     protected $fillable=[
         'name',
-        'logo'
+        'logo',
+        'uid'
     ];
     public function collages() :HasMany
     {

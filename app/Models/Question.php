@@ -13,7 +13,8 @@ class Question extends Model
     use HasFactory;
     protected $fillable=[
         'content',
-        'reference'
+        'reference',
+        'uid'
     ];
 
     public function users() :BelongsToMany

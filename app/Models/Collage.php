@@ -14,7 +14,8 @@ class Collage extends Model
 
 protected $fillable=[
     'name',
-    'logo'
+    'logo',
+    'uid'
 ];
 
 public function users() :HasMany
