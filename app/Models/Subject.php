@@ -12,7 +12,7 @@ class Subject extends Model
     use HasFactory;
     protected $fillable=[
         'name',
-        'uid'
+        'uuid'
     ];
 
     public function collage() :BelongsTo

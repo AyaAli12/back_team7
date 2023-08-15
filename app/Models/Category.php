@@ -2,17 +2,18 @@
 
 namespace App\Models;
 
+use App\Traits\GeneratesUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
-    use HasFactory;
+    use HasFactory , GeneratesUuid;
     protected $fillable=[
         'name',
         'logo',
-        'uid'
+        'uuid'
     ];
     public function collages() :HasMany
     {

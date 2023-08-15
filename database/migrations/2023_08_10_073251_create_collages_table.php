@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('collages', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uid')->unique();
+            $table->uuid('uuid')->unique();
             $table->string('name');
             $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
             $table->string('logo');

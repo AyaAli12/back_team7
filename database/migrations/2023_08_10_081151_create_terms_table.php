@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('terms', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uid')->unique();
+            $table->uuid('uuid')->unique();
             $table->string('name')->unique();
             $table->foreignId('collage_id')->constrained('collages')->cascadeOnDelete();
             $table->timestamps();

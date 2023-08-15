@@ -14,7 +14,7 @@ class Question extends Model
     protected $fillable=[
         'content',
         'reference',
-        'uid'
+        'uuid'
     ];
 
     public function users() :BelongsToMany

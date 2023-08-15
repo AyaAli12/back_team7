@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\GeneratesUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -10,12 +11,12 @@ use Mockery\Matcher\Subset;
 
 class Collage extends Model
 {
-    use HasFactory;
+    use HasFactory, GeneratesUuid;
 
 protected $fillable=[
     'name',
     'logo',
-    'uid'
+    'uuid'
 ];
 
 public function users() :HasMany
@@ -31,6 +32,11 @@ public function subjects() :HasMany
 public function terms() :HasMany
 {
     return $this->hasMany(Subject::class);
+}
+
+public function codes() :HasMany
+{
+    return $this->hasMany(Code::class);
 }
 
 public function category() :BelongsTo

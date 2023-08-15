@@ -13,7 +13,7 @@ class Term extends Model
 
     protected $fillable = [
         'name',
-        'uid',
+        'uuid',
     ]; 
 
     public function collage() : BelongsTo{

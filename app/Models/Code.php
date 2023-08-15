@@ -11,12 +11,17 @@ class Code extends Model
     use HasFactory;
 
 protected $fillable=[
-    'uid',
+    'uuid',
     'code'
 ];
 
     public function user() :BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function collage() :BelongsTo
+    {
+        return $this->belongsTo(Collage::class);
     }
 }

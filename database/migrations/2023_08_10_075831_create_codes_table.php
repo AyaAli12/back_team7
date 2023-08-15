@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('codes', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uid')->unique();
+            $table->uuid('uuid')->unique();
             $table->string('code')->unique();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('collage_id')->constrained('collages')->cascadeOnDelete();
             $table->timestamps();
         });
     }

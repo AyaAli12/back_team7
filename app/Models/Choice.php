@@ -12,7 +12,7 @@ class Choice extends Model
 
     protected $fillable = [
         'content',
-        'uid'
+        'uuid'
     ];
 
     public function questions():BelongsToMany{
